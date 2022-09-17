@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface IMobileNavbarProps {
     open: boolean;
@@ -31,7 +31,7 @@ const MobileNavbar = ({ open, setOpen }: IMobileNavbarProps) => {
             <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20">
                 {" "}
                 {/*logo container*/}
-                <Link className="text-xl font-semibold" href="/">
+                <Link href="/">
                     <a
                         onClick={() =>
                             setTimeout(() => {
@@ -39,6 +39,7 @@ const MobileNavbar = ({ open, setOpen }: IMobileNavbarProps) => {
                                 console.log(open);
                             }, 100)
                         }
+                        className="hover:text-emerald-600 transition"
                     >
                         ALAN MATHIASEN
                     </a>
@@ -75,13 +76,27 @@ const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) =>
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const [isTop, setIsTop] = useState(false);
+
+    useEffect(() => {
+        window.onscroll = () => (window.pageYOffset === 0 ? setIsTop(true) : setIsTop(false));
+
+        return () => {
+            window.onscroll = null;
+        };
+    }, []);
+    // ${!isTop ? "border-b-2" : ""} sticky top-0
     return (
-        <div className="flex items-center filter drop-shadow-md bg-white  py-4 h-20">
-            <nav className="flex items-center w-9/12 mx-auto">
+        <div
+            className={`flex items-center filter bg-zinc-50 h-20 sticky top-0 w-full border-b ${
+                !isTop ? "border-gray-400" : "border-transparent"
+            }`}
+        >
+            <nav className={`flex items-center w-9/12 mx-auto`}>
                 <MobileNavbar open={open} setOpen={setOpen} />
                 <div className="w-6/12 flex items-center">
-                    <Link className="text-xl font-semibold" href="/">
-                        ALAN MATHIASEN
+                    <Link href="/">
+                        <a className="hover:text-emerald-600 transition">ALAN MATHIASEN</a>
                     </Link>
                 </div>
                 <div className="w-6/12 flex justify-end items-center">
@@ -111,9 +126,9 @@ const Navbar = () => {
 
                     <div className="hidden md:flex">
                         {links.map((link, idx) => (
-                            <div className={`mx-4`} key={idx}>
-                                <Link href={link.to}>{link.text}</Link>
-                            </div>
+                            <Link href={link.to} key={idx}>
+                                <a className={`mx-4 hover:text-emerald-600 transition`}>{link.text}</a>
+                            </Link>
                         ))}
                     </div>
                 </div>
