@@ -29,6 +29,7 @@
         "tsx": "never"
       }
     ],
+    "import/no-extraneous-dependencies": "off",
     "no-console": "off"
   }
 }

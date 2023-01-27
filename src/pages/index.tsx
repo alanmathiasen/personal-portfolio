@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import About from '../components/About';
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
           <Projects />
           <Contact />
         </main>
+        <Footer />
       </div>
     </div>
   );

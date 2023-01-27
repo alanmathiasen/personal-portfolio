@@ -1,25 +1,11 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import { links } from '../constants';
 
 interface MobileNavbarProps {
   open: boolean;
   setOpen: (open: boolean) => void;
 }
-
-const links = [
-  {
-    to: '#about',
-    text: 'About',
-  },
-  {
-    to: '#projects',
-    text: 'Projects',
-  },
-  {
-    to: '#contact',
-    text: 'Contact',
-  },
-];
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -89,7 +75,12 @@ const Navbar = () => {
       <nav className={'flex items-center w-9/12 mx-auto '}>
         <MobileNavbar open={open} setOpen={setOpen} />
         <div className="w-6/12 flex items-center">
-          <Link className="hover:text-theme text-lg transition" href="" onClick={scrollToTop} scroll={false}>
+          <Link
+            className="hover:text-theme text-lg transition"
+            href=""
+            onClick={scrollToTop}
+            scroll={false}
+          >
             Alan Mathiasen
           </Link>
         </div>

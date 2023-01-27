@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
+import { BiLinkExternal } from 'react-icons/bi';
 
 interface IProps {
   srcImg: StaticImageData;
@@ -17,12 +18,12 @@ const TechnologyList = ({ technologies }: { technologies: string[] }) => (
 
 const Project = ({ srcImg }: IProps) => (
   <div className="flex flex-col lg:flex-row mb-10 align-center">
-    <div className="lg:max-w-lg relative grow=1z">
+    <div className="lg:max-w-lg relative">
       <a href="https://educaprevisional.com.ar" target="_blank" rel="noreferrer">
         <Image src={srcImg} alt="" className="hover:opacity-[80%] duration-200" />
       </a>
     </div>
-    <div className="lg:ml-4 md:ml-0 flex flex-col justify-between">
+    <div className="lg:ml-4 mt-4 lg:mt-0 flex flex-col justify-between">
       <div>
         <h2 className="font-medium leading-tight text-2xl mt-0 mb-2 ">Educa previsional</h2>
         <p>
@@ -33,7 +34,7 @@ const Project = ({ srcImg }: IProps) => (
           and more...
         </p>
       </div>
-      <div>
+      <div className="mt-4">
         <TechnologyList technologies={['MongoDB', 'ExpressJS', 'React', 'Node']} />
         <a
           href="https://educaprevisional.com.ar"
@@ -41,19 +42,7 @@ const Project = ({ srcImg }: IProps) => (
           target="_blank"
           rel="noreferrer"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-5 h-5 mr-2"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M15.75 2.25H21a.75.75 0 01.75.75v5.25a.75.75 0 01-1.5 0V4.81L8.03 17.03a.75.75 0 01-1.06-1.06L19.19 3.75h-3.44a.75.75 0 010-1.5zm-10.5 4.5a1.5 1.5 0 00-1.5 1.5v10.5a1.5 1.5 0 001.5 1.5h10.5a1.5 1.5 0 001.5-1.5V10.5a.75.75 0 011.5 0v8.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V8.25a3 3 0 013-3h8.25a.75.75 0 010 1.5H5.25z"
-              clip-rule="evenodd"
-            />
-          </svg>
-
+          <BiLinkExternal className="mr-2" />
           <span>Live site</span>
         </a>
       </div>
