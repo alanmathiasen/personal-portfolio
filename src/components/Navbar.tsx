@@ -69,7 +69,7 @@ const Navbar = () => {
   return (
     <div
       className={`flex items-center filter h-20 bg-body sticky top-0 w-full border-b transition z-50 ${
-        !isTop ? 'border-transparent bg-body/30' : 'border-transparent'
+        !isTop ? 'border-transparent bg-body/90' : 'border-transparent'
       } `}
     >
       <nav className={'flex items-center w-9/12 mx-auto '}>

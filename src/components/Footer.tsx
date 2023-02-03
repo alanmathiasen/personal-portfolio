@@ -15,9 +15,9 @@ const Footer = () => (
       </div>
       <div className="flex flex-col">
         {social.map((link, idx) => (
-          <div className="flex items-center gap-2" key={idx}>
+          <div className="flex items-center gap-2 hover:text-theme cursor-pointer" key={idx}>
             {link.icon}
-            <a className=" my-2 hover:text-theme">{link.text}</a>
+            <a className="my-2">{link.text}</a>
           </div>
         ))}
       </div>

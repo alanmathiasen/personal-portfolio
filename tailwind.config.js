@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        body: '#17171F',
+        body: '#19171D',
         'selected-text': '#A3A3FF',
-        theme: '#3F3FFF',
+        theme: '#9e0059',
         nav: '#404053',
-        secondary: '#9191A4',
+        secondary: '#6DA1A3',
         badge: '#3F3F51',
         'input-border': '#565666',
         input: '#2A2A35',

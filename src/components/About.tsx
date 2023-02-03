@@ -3,7 +3,7 @@ const About = () => (
     <div id="about" className="h-1 mb-20"></div>
 
     <h2 className="text-4xl text-left mb-2">About me</h2>
-    <p className="text-l">
+    <p className="text-xl">
       I am a highly motivated Junior Full Stack Developer with experience in the MERN stack
       (MongoDB, Express.js, React.js, and Node.js). My journey as a self-taught coder started at the
       start of 2021. Since then, I have been dedicated to developing my skills and building projects

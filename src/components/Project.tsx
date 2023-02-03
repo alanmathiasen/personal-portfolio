@@ -9,7 +9,7 @@ interface IProps {
 const TechnologyList = ({ technologies }: { technologies: string[] }) => (
   <div className="flex mb-3">
     {technologies.map((tech, idx) => (
-      <div className="px-2 py-1 mr-2 bg-theme rounded " key={idx}>
+      <div className="px-2 py-1 mr-2 bg-theme rounded cursor-default" key={idx}>
         {tech}
       </div>
     ))}
@@ -35,7 +35,7 @@ const Project = ({ srcImg }: IProps) => (
         </p>
       </div>
       <div className="mt-4">
-        <TechnologyList technologies={['MongoDB', 'ExpressJS', 'React', 'Node']} />
+        <TechnologyList technologies={['MongoDB', 'ExpressJS', 'React', 'NodeJS']} />
         <a
           href="https://educaprevisional.com.ar"
           className="hover:text-theme flex items-center"

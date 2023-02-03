@@ -7,7 +7,7 @@ const Projects = () => (
     <div id="projects" className="h-1 mb-20" />
 
     <h2 className="text-4xl text-left mb-2">Projects</h2>
-    <div className="mt-8 flex flex-wrap flex-col justify-around ">
+    <div className="mt-8 flex flex-wrap flex-col justify-around gap-y-6 ">
       <Project srcImg={educaPic} />
       <Project srcImg={educaPic} />
       <Project srcImg={educaPic} />

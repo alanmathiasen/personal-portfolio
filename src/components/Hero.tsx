@@ -12,7 +12,7 @@ const Hero = () => (
       </h1>
       <div className="w-full flex justify-center md:justify-start">
         <a href="#projects">
-          <button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3">
+          <button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3 hover:bg-secondary rounded">
             <div></div>
             <span>View my work.</span>
           </button>
