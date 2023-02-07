@@ -17,10 +17,14 @@ const TechnologyList = ({ technologies }: { technologies: string[] }) => (
 );
 
 const Project = ({ srcImg }: IProps) => (
-  <div className="flex flex-col lg:flex-row mb-10 align-center">
+  <div className="sm: max-w-[100%] flex flex-col lg:flex-row mb-10 align-center">
     <div className="lg:max-w-lg relative">
       <a href="https://educaprevisional.com.ar" target="_blank" rel="noreferrer">
-        <Image src={srcImg} alt="" className="hover:opacity-[80%] duration-200" />
+        <Image
+          src={srcImg}
+          alt="preview of educa previsional website"
+          className="hover:opacity-[80%] duration-200"
+        />
       </a>
     </div>
     <div className="lg:ml-4 mt-4 lg:mt-0 flex flex-col justify-between">
