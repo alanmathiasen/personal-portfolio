@@ -4,26 +4,26 @@ import { GrMail } from 'react-icons/gr';
 export const links = [
   {
     to: '#about',
-    text: 'About',
+    text: { es: 'Sobre mi', en: 'About' },
   },
   {
     to: '#projects',
-    text: 'Projects',
+    text: { es: 'Proyectos', en: 'Projects' },
   },
   {
     to: '#contact',
-    text: 'Contact',
+    text: { es: 'Contacto', en: 'Contact' },
   },
 ];
 
 export const social = [
   {
-    icon: <BsGithub />,
+    icon: <BsLinkedin />,
     text: 'Linkedin',
     link: 'https://www.linkedin.com/in/alan-mathiasen-8041a1203',
   },
   {
-    icon: <BsLinkedin />,
+    icon: <BsGithub />,
     text: 'Github',
     link: 'https://www.github.com/alanmathiasen',
   },

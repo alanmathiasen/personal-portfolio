@@ -1,0 +1,17 @@
+{
+  "home.hero.description1": "Creando",
+  "home.hero.description2": "experiencias web hermosas.",
+  "home.hero.button": "Mis trabajos",
+
+  "about.title": "Sobre mi",
+  "about.description": "Soy un desarrollador Jr Full Stack muy motivado, con experiencia en el stack MERN (MongoDB, Express.js, React.js, y Node.js). Mi trayecto como programador autodidacta comenzó a principios de 2021. Desde entonces, me dediqué a desarrollar mis habilidades y construir proyectos de alta calidad. Me enorgullece mi habilidad para trabajar tanto independientemente como en un equipo. Estoy siempre en la búsqueda de nuevos desafios para mejorar como programador.",
+
+  "projects.title": "Proyectos",
+  "projects.live": "Sitio web",
+  "projects.educaprevisional.title": "Educa Previsional",
+  "projects.educaprevisional.description": "Plataforma de cursos para una empresa de abogacía. El sitio esta diseñado para proveer capacitación legal de forma online a los clientes. Esta plataforma está desarrollada con el stack MERN y esta diseñada para ser intuitiva y user-friendly. Incluye CMS, pasarela de pagos de MercadoPago, una API restful, integración con Vimeo, y más.",
+
+  "contact.title": "Contacto",
+
+  "footer.description": "Hecho por Alan Mathiasen. 2023"
+}

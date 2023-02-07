@@ -1,3 +1,4 @@
+import useLang from '@/hooks/useLang';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { links } from '../constants';
@@ -15,6 +16,8 @@ const scrollToTop = () => {
 };
 
 const MobileNavbar = ({ open, setOpen }: MobileNavbarProps) => {
+  const { t } = useLang();
+
   const handleOpenMobileNavbar = () => {
     setTimeout(() => {
       setOpen(!open);
@@ -46,7 +49,7 @@ const MobileNavbar = ({ open, setOpen }: MobileNavbarProps) => {
         {links.map((link, idx) => (
           <Link legacyBehavior href={link.to} key={idx} scroll={false}>
             <a className=" my-6 hover:text-theme" onClick={handleOpenMobileNavbar}>
-              {link.text}
+              {link.text[t as keyof typeof link.text]}
             </a>
           </Link>
         ))}
@@ -58,6 +61,7 @@ const MobileNavbar = ({ open, setOpen }: MobileNavbarProps) => {
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [isTop, setIsTop] = useState(false);
+  const { t } = useLang();
 
   useEffect(() => {
     window.onscroll = () => (window.pageYOffset === 0 ? setIsTop(true) : setIsTop(false));
@@ -110,7 +114,9 @@ const Navbar = () => {
           <div className="hidden md:flex">
             {links.map((link, idx) => (
               <Link legacyBehavior href={link.to} key={idx} scroll={false}>
-                <a className={'mx-4 hover:text-theme transition'}>{link.text}</a>
+                <a className={'mx-4 hover:text-theme transition'}>
+                  {link.text[t as keyof typeof link.text]}
+                </a>
               </Link>
             ))}
           </div>
