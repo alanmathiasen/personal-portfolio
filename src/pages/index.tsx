@@ -17,6 +17,9 @@ const Home: NextPage = () => (
       />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <link rel="icon" href="/favicon.ico" />
+      <link rel="alternate" href="/" hrefLang="x-default" />
+      <link rel="alternate" href="/" hrefLang="en" />
+      <link rel="alternate" href="/es" hrefLang="es" />
     </Head>
     <div className="bg-body text-white font-poppins pb-12">
       <Navbar />

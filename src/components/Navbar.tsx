@@ -2,6 +2,7 @@ import useLang from '@/hooks/useLang';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { links } from '../constants';
+import LangSwitcher from './LangSwitcher';
 
 interface MobileNavbarProps {
   open: boolean;
@@ -61,8 +62,8 @@ const MobileNavbar = ({ open, setOpen }: MobileNavbarProps) => {
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [isTop, setIsTop] = useState(false);
-  const { t } = useLang();
-
+  const { t, locales } = useLang();
+  console.log(locales);
   useEffect(() => {
     window.onscroll = () => (window.pageYOffset === 0 ? setIsTop(true) : setIsTop(false));
     return () => {
@@ -111,7 +112,7 @@ const Navbar = () => {
             />
           </div>
 
-          <div className="hidden md:flex">
+          <div className="hidden md:flex items-center">
             {links.map((link, idx) => (
               <Link legacyBehavior href={link.to} key={idx} scroll={false}>
                 <a className={'mx-4 hover:text-theme transition'}>
@@ -119,6 +120,7 @@ const Navbar = () => {
                 </a>
               </Link>
             ))}
+            <LangSwitcher />
           </div>
         </div>
       </nav>
