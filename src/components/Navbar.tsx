@@ -81,7 +81,7 @@ const Navbar = () => {
         <nav className={'flex items-center w-full w-11/12 md:w-9/12 mx-auto'}>
           <div className="w-full flex justify-between items-center">
             <div
-              className="z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden"
+              className="z-50 flex relative w-8 h-6 flex-col justify-between items-start md:hidden"
               onClick={() => setOpen(!open)}
             >
               {/* hamburger button */}
@@ -92,7 +92,7 @@ const Navbar = () => {
               />
               <span
                 className={`h-1 w-full bg-white rounded-sm transition-all duration-300 ease-in-out ${
-                  open ? 'w-0' : 'w-full'
+                  open ? 'w-0' : 'w-[80%]'
                 }`}
               />
               <span
