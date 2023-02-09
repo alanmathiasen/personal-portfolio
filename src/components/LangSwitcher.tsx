@@ -15,7 +15,7 @@ function classNames(...classes: string[]) {
 const LangSwitcher = () => {
   const { locale, locales } = useLang();
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="relative inline-block text-left !z-0">
       <div>
         <Menu.Button className="inline-flex items-center w-full justify-center rounded-md px-2 py-1 text-sm font-medium text-white shadow-sm hover:bg-theme focus:outline-none focus:ring-2 focus:ring-theme ">
           {locale === 'es' ? (
