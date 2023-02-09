@@ -36,7 +36,7 @@ const LangSwitcher = () => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 mt-0 w-28 origin-top-right rounded-md bg-gray-600 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 mt-0 w-28 origin-top-right rounded-md bg-gray-600 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
@@ -45,6 +45,8 @@ const LangSwitcher = () => {
                   locale={'en'}
                   className={classNames(
                     active ? 'bg-theme' : '',
+                    locale === 'en' ? 'bg-theme' : '',
+
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm gap-1 text-white',
                   )}
                 >
@@ -60,6 +62,7 @@ const LangSwitcher = () => {
                   locale={'es'}
                   className={classNames(
                     active ? 'bg-theme' : '',
+                    locale === 'es' ? 'bg-theme' : '',
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm gap-1 text-white',
                   )}
                 >
@@ -73,15 +76,6 @@ const LangSwitcher = () => {
       </Transition>
     </Menu>
   );
-  // <div>
-  //
-  //   {/* {[...locales!].sort().map((loc) => (
-  //     <Link key={loc} href="/" locale={loc} className="hover:text-theme">
-  //       {loc}
-  //     </Link>
-  //   ))} */}
-  // </div>
-  // );
 };
 
 export default LangSwitcher;

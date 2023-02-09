@@ -72,59 +72,63 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div
-      className={`flex items-center filter h-20 bg-body sticky top-0 w-full border-b transition z-50 ${
-        !isTop ? 'border-transparent bg-body/90' : 'border-transparent'
-      } `}
-    >
-      <nav className={'flex items-center w-9/12 mx-auto '}>
+    <>
+      <div
+        className={` flex items-center filter h-20 bg-body sticky top-0 w-full border-b transition z-40 ${
+          !isTop ? 'border-transparent bg-body/90' : 'border-transparent'
+        } `}
+      >
         <MobileNavbar open={open} setOpen={setOpen} />
-        <div className="w-6/12 flex items-center">
-          <Link
-            className="hover:text-theme text-lg transition"
-            href=""
-            onClick={scrollToTop}
-            scroll={false}
-          >
-            Alan Mathiasen
-          </Link>
-        </div>
-        <div className="w-6/12 flex justify-end items-center">
-          <div
-            className="z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden"
-            onClick={() => setOpen(!open)}
-          >
-            {/* hamburger button */}
-            <span
-              className={`h-1 w-full bg-white rounded-sm transform transition duration-300 ease-in-out ${
-                open ? 'rotate-45 translate-y-2.5' : ''
-              }`}
-            />
-            <span
-              className={`h-1 w-full bg-white rounded-sm transition-all duration-300 ease-in-out ${
-                open ? 'w-0' : 'w-full'
-              }`}
-            />
-            <span
-              className={`h-1 w-full bg-white rounded-sm transform transition duration-300 ease-in-out ${
-                open ? '-rotate-45 -translate-y-2.5' : ''
-              }`}
-            />
-          </div>
-
-          <div className="hidden md:flex items-center">
-            {links.map((link, idx) => (
-              <Link legacyBehavior href={link.to} key={idx} scroll={false}>
-                <a className={'mx-4 hover:text-theme transition'}>
-                  {link.text[t as keyof typeof link.text]}
-                </a>
+        <nav className={'flex items-center w-9/12 mx-auto'}>
+          <div className="w-full flex justify-between items-center">
+            <div
+              className="z-40 flex relative w-8 h-6 flex-col justify-between items-center md:hidden"
+              onClick={() => setOpen(!open)}
+            >
+              {/* hamburger button */}
+              <span
+                className={`h-1 w-full bg-white rounded-sm transform transition duration-300 ease-in-out ${
+                  open ? 'rotate-45 translate-y-2.5' : ''
+                }`}
+              />
+              <span
+                className={`h-1 w-full bg-white rounded-sm transition-all duration-300 ease-in-out ${
+                  open ? 'w-0' : 'w-full'
+                }`}
+              />
+              <span
+                className={`h-1 w-full bg-white rounded-sm transform transition duration-300 ease-in-out ${
+                  open ? '-rotate-45 -translate-y-2.5' : ''
+                }`}
+              />
+            </div>
+            <div className="flex items-center">
+              <Link
+                className="hover:text-theme text-lg transition"
+                href=""
+                onClick={scrollToTop}
+                scroll={false}
+              >
+                Alan Mathiasen
               </Link>
-            ))}
-            <LangSwitcher />
+            </div>
+            <div className="flex ">
+              <div className="hidden md:flex items-center">
+                {links.map((link, idx) => (
+                  <Link legacyBehavior href={link.to} key={idx} scroll={false}>
+                    <a className={'mx-4 hover:text-theme transition'}>
+                      {link.text[t as keyof typeof link.text]}
+                    </a>
+                  </Link>
+                ))}
+              </div>
+              {/* {!open && } */}
+              <LangSwitcher />
+            </div>
           </div>
-        </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
+    </>
   );
 };
 
