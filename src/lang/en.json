@@ -1,15 +1,20 @@
 {
-  "home.hero.description1": "Building",
-  "home.hero.description2": "beautiful web experiences.",
+  "home.hero.title1": "Alan Mathiasen",
+  "home.hero.title2": "Fullstack MERN developer",
+  "home.hero.description": "Passionated about programming and web development. Always seeking new challenges to grow as a developer.",
+
   "home.hero.button": "View my work",
 
   "about.title": "About Me",
-  "about.description": "I am a highly motivated Junior Full Stack Developer with experience in the MERN stack (MongoDB, Express.js, React.js, and Node.js). My journey as a self-taught coder started at the start of 2021. Since then, I have been dedicated to developing my skills and building projects of high quality. I pride myself on my ability to work both independently and as part of a team. I am always seeking for new challenges to improve as a programmer.",
+  "about.description": "Passionated about programming and web development. Always seeking new challenges to grow as a developer",
   "projects.title": "Projects",
   "projects.live": "Live site",
 
   "projects.educaprevisional.title": "Educa Previsional",
   "projects.educaprevisional.description": "Course platform for a law firm. The website is designed to provide online legal training courses to the clients. The platform is built using the MERN stack and is designed to be intuitive and user-friendly. It includes a CMS, a payment gateway with MercadoPago, a restful API, Vimeo integration, and more.",
+
+  "projects.twitter-clone.title": "Tweeter (Twitter clone)",
+  "projects.twitter-clone.description": "A clone of twitter",
 
   "contact.title": "Contact",
 

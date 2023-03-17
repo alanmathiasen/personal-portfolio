@@ -1,6 +1,8 @@
 {
-  "home.hero.description1": "Creando",
-  "home.hero.description2": "experiencias web hermosas.",
+  "home.hero.title1": "Alan Mathiasen",
+  "home.hero.title2": "Desarrollador MERN fullstack",
+  "home.hero.description": "Apasionado sobre la programación y el desarrollo web. Siempre en la búsqueda de nuevos retos para crecer profesionalmente.",
+
   "home.hero.button": "Mis trabajos",
 
   "about.title": "Sobre Mi",
@@ -8,8 +10,12 @@
 
   "projects.title": "Proyectos",
   "projects.live": "Sitio web",
+
   "projects.educaprevisional.title": "Educa Previsional",
   "projects.educaprevisional.description": "Plataforma de cursos para una empresa de abogacía. El sitio esta diseñado para proveer capacitación legal de forma online a los clientes. Esta plataforma está desarrollada con el stack MERN y esta diseñada para ser intuitiva y user-friendly. Incluye CMS, pasarela de pagos de MercadoPago, una API restful, integración con Vimeo, y más.",
+
+  "projects.twitter-clone.title": "Tweeter (clon de Twitter)",
+  "projects.twitter-clone.description": "Un clon de Twitter",
 
   "contact.title": "Contacto",
 
