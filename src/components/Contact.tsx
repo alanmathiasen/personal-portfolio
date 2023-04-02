@@ -12,7 +12,7 @@ interface ISocialLinkProps {
 const SocialLink = ({ icon, link, text, styles }: ISocialLinkProps) => (
   <div className={`flex flex-col md:flex-row md:text-xl gap-2 md:items-end  ${styles}`}>
     <div className="flex gap-2 text-2xl items-center ">
-      <span className="text-xlight mr-3">{icon}</span>
+      <span className="text-theme mr-3">{icon}</span>
       <span>{text}:</span>
     </div>
     <a
@@ -30,7 +30,7 @@ const Contact = () => (
   <div className="mb-32">
     <div id="contact" className="h-1 mb-20" />
 
-    <h2 className="text-4xl text-left mb-6 text-xlight">
+    <h2 className="text-4xl text-left mb-6 text-theme">
       <FormattedMessage id="contact.title" />
     </h2>
     <div>

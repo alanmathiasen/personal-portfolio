@@ -14,9 +14,9 @@ interface IProps {
 }
 
 const TechnologyList = ({ technologies }: { technologies: string[] }) => (
-  <div className="flex mb-3 flex-wrap gap-2 text-black">
+  <div className="flex mb-3 flex-wrap gap-2 ">
     {technologies.map((tech, idx) => (
-      <div className="px-2 py-1 bg-theme rounded cursor-default" key={idx}>
+      <div className="px-2 py-1 bg-theme-dark rounded cursor-default" key={idx}>
         {tech}
       </div>
     ))}
@@ -24,21 +24,21 @@ const TechnologyList = ({ technologies }: { technologies: string[] }) => (
 );
 
 const Project = ({ srcImg, title, description, technologies, liveSite, github }: IProps) => (
-  <div className="sm: max-w-[100%] flex flex-col lg:flex-row  align-center border-2 border-xlight rounded-md p-4 ">
+  <div className="sm: max-w-[100%] back flex flex-col lg:flex-row bg-body-secondary  align-center  rounded-md p-4 ">
     <h2 className="font-medium leading-tight text-2xl mt-0 mb-2 text-light lg:hidden">
       {' '}
       <FormattedMessage id={title} />
     </h2>
-    <div className="lg:max-w-md relative">
+    <div className="lg:max-w-sm relative">
       <Image
         src={srcImg}
         alt="preview of educa previsional website"
         className="hover:opacity-80 duration-200"
       />
     </div>
-    <div className="lg:ml-20 mt-4 lg:mt-0 flex flex-col justify-between">
+    <div className="lg:ml-5 mt-4 lg:mt-0 flex flex-col justify-between">
       <div>
-        <h2 className="font-medium leading-tight text-2xl mt-0 mb-2 text-light hidden lg:block">
+        <h2 className="font-medium leading-tight text-2xl mt-0 mb-2 text-theme-light hidden lg:block">
           {' '}
           <FormattedMessage id={title} />
         </h2>

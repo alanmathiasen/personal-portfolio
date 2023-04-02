@@ -8,7 +8,7 @@ const Projects = () => (
   <div className="mt-[-54px] pt-54">
     <div id="projects" className="h-1 mb-20" />
 
-    <h2 className="text-4xl text-left mb-2 text-xlight">
+    <h2 className="text-4xl text-left mb-2 text-theme-light">
       {' '}
       <FormattedMessage id="projects.title" />
     </h2>

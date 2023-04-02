@@ -25,7 +25,7 @@ const Home: NextPage = () => (
       <Navbar />
 
       <Hero />
-      <main className="w-10/12 md:w-8/12 mx-auto ">
+      <main className="w-10/12 md:w-6/12 mx-auto ">
         {/* <About /> */}
         <Projects />
         <Contact />
