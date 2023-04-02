@@ -49,7 +49,7 @@ const MobileNavbar = ({ open, setOpen }: MobileNavbarProps) => {
       <div className="flex flex-col ml-4">
         {links.map((link, idx) => (
           <Link legacyBehavior href={link.to} key={idx} scroll={false}>
-            <a className=" my-6 hover:text-theme" onClick={handleOpenMobileNavbar}>
+            <a className=" my-6 hover:text-accent" onClick={handleOpenMobileNavbar}>
               {link.text[t as keyof typeof link.text]}
             </a>
           </Link>
@@ -103,7 +103,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center">
               <Link
-                className="hover:text-theme text-lg transition"
+                className="hover:text-accent text-xl transition"
                 href=""
                 onClick={scrollToTop}
                 scroll={false}
@@ -115,7 +115,7 @@ const Navbar = () => {
               <div className="hidden md:flex items-center">
                 {links.map((link, idx) => (
                   <Link legacyBehavior href={link.to} key={idx} scroll={false}>
-                    <a className={'mx-4 hover:text-theme transition'}>
+                    <a className={'mx-4 hover:text-accent transition'}>
                       {link.text[t as keyof typeof link.text]}
                     </a>
                   </Link>

@@ -17,7 +17,7 @@ const LangSwitcher = () => {
   return (
     <Menu as="div" className="relative inline-block text-left !z-0">
       <div>
-        <Menu.Button className="inline-flex items-center w-full justify-center rounded-md px-2 py-1 text-sm font-medium text-white shadow-sm hover:bg-theme focus:outline-none focus:ring-2 focus:ring-theme ">
+        <Menu.Button className="inline-flex items-center w-full justify-center rounded-md px-2 py-1 text-sm font-medium text-white shadow-sm hover:bg-accent focus:outline-none focus:ring-2 focus:ring-accent ">
           {locale === 'es' ? (
             <Image src={spainIcon} alt="spain flag" width="32" height="32" />
           ) : (
@@ -44,8 +44,8 @@ const LangSwitcher = () => {
                   href="/"
                   locale={'en'}
                   className={classNames(
-                    active ? 'bg-theme' : '',
-                    locale === 'en' ? 'bg-theme' : '',
+                    active ? 'bg-accent' : '',
+                    locale === 'en' ? 'bg-accent' : '',
 
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm gap-1 text-white',
                   )}
@@ -61,8 +61,8 @@ const LangSwitcher = () => {
                   href="/"
                   locale={'es'}
                   className={classNames(
-                    active ? 'bg-theme' : '',
-                    locale === 'es' ? 'bg-theme' : '',
+                    active ? 'bg-accent' : '',
+                    locale === 'es' ? 'bg-accent' : '',
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm gap-1 text-white',
                   )}
                 >

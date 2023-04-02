@@ -39,7 +39,7 @@ const ParticlesContainer = ({ styles }: { styles: string | undefined }) => {
         interactivity: {
           events: {
             onClick: {
-              enable: true,
+              enable: false,
               mode: 'push',
             },
             onHover: {
@@ -60,14 +60,14 @@ const ParticlesContainer = ({ styles }: { styles: string | undefined }) => {
         },
         particles: {
           color: {
-            value: '#9E0059',
+            value: '#db504a',
           },
           links: {
-            color: '#5f1a37',
+            color: '#db504a',
             distance: 150,
             enable: true,
             opacity: 0.8,
-            width: 1,
+            width: 3,
           },
           collisions: {
             enable: true,
@@ -76,7 +76,7 @@ const ParticlesContainer = ({ styles }: { styles: string | undefined }) => {
             // directions: 'none',
             enable: true,
             outModes: {
-              default: 'bounce',
+              default: 'bounceVertical',
             },
             random: true,
             speed: 2,
@@ -96,7 +96,7 @@ const ParticlesContainer = ({ styles }: { styles: string | undefined }) => {
             type: 'circle',
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 3, max: 10 },
           },
         },
         detectRetina: true,
