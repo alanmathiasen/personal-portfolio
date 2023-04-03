@@ -21,7 +21,7 @@ const Hero = () => (
       </div>
       <div className="w-full flex justify-center md:justify-start">
         <a href="#projects">
-          <button className="px-8 py-4 bg-theme text-black font-bold mt-12 flex items-center space-x-3 rounded">
+          <button className="px-8 py-4 bg-theme  font-bold mt-12 flex items-center space-x-3 rounded">
             <FormattedMessage id="home.hero.button" />
             <span></span>
           </button>
