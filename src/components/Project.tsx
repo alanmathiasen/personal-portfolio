@@ -1,16 +1,12 @@
-import Image, { StaticImageData } from 'next/image';
+import { Project } from '@/types';
+import Image from 'next/image';
 import React from 'react';
 import { BiLinkExternal } from 'react-icons/bi';
 import { BsGithub } from 'react-icons/bs';
 import { FormattedMessage } from 'react-intl';
 
 interface IProps {
-  title: string;
-  description: string;
-  technologies: string[];
-  liveSite?: string;
-  github?: string;
-  srcImg: StaticImageData;
+  project: Project;
 }
 
 const TechnologyList = ({ technologies }: { technologies: string[] }) => (
@@ -23,15 +19,15 @@ const TechnologyList = ({ technologies }: { technologies: string[] }) => (
   </div>
 );
 
-const Project = ({ srcImg, title, description, technologies, liveSite, github }: IProps) => (
+const Project = ({ project }: IProps) => (
   <div className="sm: max-w-[100%] back flex flex-col lg:flex-row bg-body-secondary  align-center  rounded-md p-4 ">
     <h2 className="font-medium leading-tight text-2xl mt-0 mb-2 text-light lg:hidden">
       {' '}
-      <FormattedMessage id={title} />
+      <FormattedMessage id={project.title} />
     </h2>
     <div className="lg:max-w-sm relative">
       <Image
-        src={srcImg}
+        src={project.img}
         alt="preview of educa previsional website"
         className="hover:opacity-80 duration-200"
       />
@@ -40,19 +36,19 @@ const Project = ({ srcImg, title, description, technologies, liveSite, github }:
       <div>
         <h2 className="font-medium leading-tight text-2xl mt-0 mb-2 text-theme-light hidden lg:block">
           {' '}
-          <FormattedMessage id={title} />
+          <FormattedMessage id={project.title} />
         </h2>
         <p>
-          <FormattedMessage id={description} />
+          <FormattedMessage id={project.description} />
         </p>
       </div>
       <div className="w-full h-[1px] bg-slate-400 my-8"></div>
       <div className="mt-4">
-        <TechnologyList technologies={technologies} />
+        <TechnologyList technologies={project.technologies} />
         <div className="flex gap-6">
-          {liveSite && (
+          {project.liveSite && (
             <a
-              href={liveSite}
+              href={project.liveSite}
               className="text-accent flex items-center"
               target="_blank"
               rel="noreferrer"
@@ -64,9 +60,9 @@ const Project = ({ srcImg, title, description, technologies, liveSite, github }:
               </span>
             </a>
           )}
-          {github && (
+          {project.github && (
             <a
-              href={github}
+              href={project.github}
               className="text-accent flex items-center"
               target="_blank"
               rel="noreferrer"

@@ -22,7 +22,6 @@ const MobileNavbar = ({ open, setOpen }: MobileNavbarProps) => {
   const handleOpenMobileNavbar = () => {
     setTimeout(() => {
       setOpen(!open);
-      console.log(open);
     }, 1);
   };
   return (
@@ -63,7 +62,6 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [isTop, setIsTop] = useState(false);
   const { t, locales } = useLang();
-  console.log(locales);
   useEffect(() => {
     window.onscroll = () => (window.pageYOffset === 0 ? setIsTop(true) : setIsTop(false));
     return () => {

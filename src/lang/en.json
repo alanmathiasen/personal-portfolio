@@ -16,6 +16,9 @@
   "projects.twitter-clone.title": "Tweeter (Twitter clone)",
   "projects.twitter-clone.description": "A clone of twitter",
 
+  "projects.coderhouse.title": "Express Backend for e-commerce",
+  "projects.coderhouse.description": "A fully functional backend for a fictional e-commerce. Features a REST API, JWT authentication, layered architecture, SocketIO implementation, etc",
+
   "contact.title": "Contact",
 
   "footer.description": "Made by Alan Mathiasen. 2023"
