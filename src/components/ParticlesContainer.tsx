@@ -29,7 +29,7 @@ const ParticlesContainer = ({ styles }: { styles: string | undefined }) => {
       options={{
         background: {
           color: {
-            value: '#19171D',
+            value: '#19181a',
           },
         },
         fullScreen: {

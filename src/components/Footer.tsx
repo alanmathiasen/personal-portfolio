@@ -16,13 +16,13 @@ const Footer = () => {
         <div className="flex flex-col">
           {links.map((link, idx) => (
             <Link legacyBehavior href={link.to} key={idx} scroll={false}>
-              <a className=" my-2 hover:text-theme">{link.text[t as keyof typeof link.text]}</a>
+              <a className=" my-2 hover:text-accent">{link.text[t as keyof typeof link.text]}</a>
             </Link>
           ))}
         </div>
         <div className="flex flex-col">
           {social.map((link, idx) => (
-            <div className="flex items-center gap-2 hover:text-theme cursor-pointer" key={idx}>
+            <div className="flex items-center gap-2 hover:text-accent cursor-pointer" key={idx}>
               {link.icon}
               <a className="my-2">{link.text}</a>
             </div>

@@ -49,7 +49,7 @@ const Project = ({ project }: IProps) => (
           {project.liveSite && (
             <a
               href={project.liveSite}
-              className="text-accent flex items-center"
+              className="hover:text-accent flex items-center"
               target="_blank"
               rel="noreferrer"
             >
@@ -63,7 +63,7 @@ const Project = ({ project }: IProps) => (
           {project.github && (
             <a
               href={project.github}
-              className="text-accent flex items-center"
+              className="hover:text-accent flex items-center"
               target="_blank"
               rel="noreferrer"
             >

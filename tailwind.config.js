@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        body: '#19171D',
-        'body-secondary': '#1F1D24',
+        body: '#19181a',
+        'body-secondary': '#19181a',
         'selected-text': '#A3A3FF',
-        theme: '#479A6F',
-        'theme-light': '#8ED081',
-        'theme-dark': '#00635D',
+        theme: '#479761',
+        'theme-light': '#479761',
+        'theme-dark': '#479761',
         nav: '#404053',
         accent: '#A63446',
         badge: '#3F3F51',
